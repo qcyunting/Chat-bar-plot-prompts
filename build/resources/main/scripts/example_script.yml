@@ -1,0 +1,27 @@
+name: "example_script"
+description: "这是一个示例剧本"
+lines:
+  - speaker: "旁白"
+    content: "在一个宁静的早晨..."
+    duration: 3000
+    color: "GRAY"
+
+  - speaker: "英雄"
+    content: "我要开始新的冒险了！"
+    duration: 2000
+    color: "GOLD"
+
+  - speaker: "村民"
+    content: "小心前方的危险！"
+    duration: 2500
+    color: "GREEN"
+
+  - speaker: "旁白"
+    content: "英雄踏上了征程..."
+    duration: 3000
+    color: "GRAY"
+
+  - speaker: "NPC"
+    content: "欢迎来到我的商店！"
+    duration: 2000
+    color: "AQUA"

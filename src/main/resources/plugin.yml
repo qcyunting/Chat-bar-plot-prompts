@@ -1,0 +1,25 @@
+name: ChatBarPlotPrompts
+version: '${version}'
+
+main: com.QC.ChatBarPlotPrompts
+api-version: '1.21.4'
+load: POSTWORLD
+
+authors: [ Cunzheng1916 ]
+
+
+commands:
+  script:
+    description: 播放剧本
+    usage: /script <play|stop|list> [剧本名称] [玩家名称]
+    permission: chatbarplotprompts.use
+  scriptadmin:
+    description: 管理员命令
+    usage: /scriptadmin <reload>
+    permission: chatbarplotprompts.admin
+
+permissions:
+  chatbarplotprompts.use:
+    default: true
+  chatbarplotprompts.admin:
+    default: op

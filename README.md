@@ -60,54 +60,65 @@ lines:
     duration: 2500
     color: "GREEN"
 
-配置参数说明
-参数	类型	说明	示例
-description	String	剧本描述，会在 /script list 中显示	"主线剧情第一章"
-speaker	String	说话人名称	"国王", "NPC", "系统"
-content	String	说话内容	"欢迎来到我的王国！"
-duration	Integer	该句话显示后到下一句话的等待时间（毫秒）	2000 (2秒)
-color	String	文字颜色	"GOLD", "RED", "AQUA"
-支持的颜色
-颜色代码	颜色名称	效果
-BLACK	黑色	黑色文字
-DARK_BLUE	深蓝色	深蓝色文字
-DARK_GREEN	深绿色	深绿色文字
-DARK_AQUA	深青色	深青色文字
-DARK_RED	深红色	深红色文字
-DARK_PURPLE	深紫色	深紫色文字
-GOLD	金色	金色文字
-GRAY	灰色	灰色文字
-DARK_GRAY	深灰色	深灰色文字
-BLUE	蓝色	蓝色文字
-GREEN	绿色	绿色文字
-AQUA	青色	青色文字
-RED	红色	红色文字
-LIGHT_PURPLE	浅紫色	浅紫色文字
-YELLOW	黄色	黄色文字
-WHITE	白色	白色文字
-也可以使用颜色代码，如 &a（绿色）、&c（红色）等。
-❗ 注意事项
-剧本文件编码：请使用 UTF-8 编码保存 YAML 文件
+### 配置参数说明
 
-duration 单位：毫秒（ms），1000 = 1秒
+| 参数 | 类型 | 说明 | 示例 |
+|------|------|------|------|
+| description | String | 剧本描述，会在 `/script list` 中显示 | "主线剧情第一章" |
+| speaker | String | 说话人名称 | "国王", "NPC", "系统" |
+| content | String | 说话内容 | "欢迎来到我的王国！" |
+| duration | Integer | 该句话显示后到下一句话的等待时间（毫秒） | 2000 (2秒) |
+| color | String | 文字颜色 | "GOLD", "RED", "AQUA" |
 
-剧本名称：使用文件名（不含 .yml 扩展名）作为剧本名
+### 支持的颜色
 
-颜色代码：建议使用大写字母的颜色名称
+| 颜色代码 | 颜色名称 | 效果 |
+|---------|----------|------|
+| BLACK | 黑色 | 黑色文字 |
+| DARK_BLUE | 深蓝色 | 深蓝色文字 |
+| DARK_GREEN | 深绿色 | 深绿色文字 |
+| DARK_AQUA | 深青色 | 深青色文字 |
+| DARK_RED | 深红色 | 深红色文字 |
+| DARK_PURPLE | 深紫色 | 深紫色文字 |
+| GOLD | 金色 | 金色文字 |
+| GRAY | 灰色 | 灰色文字 |
+| DARK_GRAY | 深灰色 | 深灰色文字 |
+| BLUE | 蓝色 | 蓝色文字 |
+| GREEN | 绿色 | 绿色文字 |
+| AQUA | 青色 | 青色文字 |
+| RED | 红色 | 红色文字 |
+| LIGHT_PURPLE | 浅紫色 | 浅紫色文字 |
+| YELLOW | 黄色 | 黄色文字 |
+| WHITE | 白色 | 白色文字 |
 
-特殊字符：避免在内容中使用会导致 YAML 解析错误的特殊字符
-🐛 常见问题
-Q: 修改剧本后没有生效？
-A: 需要使用 /scriptadmin reload 重新加载剧本文件。
+也可以使用颜色代码，如 `&a`（绿色）、`&c`（红色）等。
 
-Q: 剧本播放时颜色不显示？
+### ❗ 注意事项
+
+1. **剧本文件编码**：请使用 UTF-8 编码保存 YAML 文件
+2. **duration 单位**：毫秒（ms），1000 = 1秒
+3. **剧本名称**：使用文件名（不含 .yml 扩展名）作为剧本名
+4. **颜色代码**：建议使用大写字母的颜色名称
+5. **特殊字符**：避免在内容中使用会导致 YAML 解析错误的特殊字符
+
+### 🐛 常见问题
+
+**Q: 修改剧本后没有生效？**
+
+A: 需要使用 `/scriptadmin reload` 重新加载剧本文件。
+
+**Q: 剧本播放时颜色不显示？**
+
 A: 检查颜色名称是否使用大写，或使用标准的 Minecraft 颜色代码。
 
-Q: 可以为多个玩家同时播放不同的剧本吗？
+**Q: 可以为多个玩家同时播放不同的剧本吗？**
+
 A: 可以，每个玩家独立播放，互不干扰。
 
-Q: 剧本播放中可以停止吗？
-A: 可以使用 /script stop 命令随时停止当前剧本。
+**Q: 剧本播放中可以停止吗？**
 
-Q: 如何删除剧本？
-A: 直接删除 scripts 文件夹中的对应 .yml 文件，然后执行 /scriptadmin reloa
+A: 可以使用 `/script stop` 命令随时停止当前剧本。
+
+**Q: 如何删除剧本？**
+
+A: 直接删除 `scripts` 文件夹中的对应 `.yml` 文件，然后执行 `/scriptadmin reload`。

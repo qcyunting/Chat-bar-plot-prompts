@@ -1,4 +1,4 @@
-# ChatBarPlotPrompts - 聊天栏剧本插件
+# ChatBarPlotPrompts - 聊天栏剧本插件（目前千阙云庭仍然使用由星汉编写的插件）
 
 一个为 Paper 1.21.4 服务器设计的 Minecraft 插件，可以在聊天栏向玩家播放剧本对话，支持 YAML 格式配置，可自定义每句话的时长、说话人和文字颜色。
 
